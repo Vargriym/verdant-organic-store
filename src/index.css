@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.show__profileActions {
+  display: block !important;
+}
+ .profile__actions {
+  position: absolute;
+  top: 96%;
+  right: 1px;
+  width: 180px;
+  z-index: 10;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #81c784;
+  line-height: 30px;
+  display: none;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.profile {
+  position: relative;
+  z-index: 9;
+  }
+.profile-btns button {
+  background-color: #fdbf06;
+  width: 150px;
+  padding: 3px 35px;
+  display: block;
+  margin: 5px auto;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.user-panel-pic {
+  border: 2px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.nav-active {
+font-weight: 700;
+color: #81c784;
+}
+.nav-items li:hover {
+  color:#81c784;
+}
+.services {
+  background:#6a9739;
+}
+.service-item {
+padding: 25px;
+display: flex;
+align-items: center;
+column-gap: 0.7rem;
+cursor: pointer;
+background: #e2f2b2;
+border: 1px solid #000;
+}
+.service-icon {
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.service-item span {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.service-item h3 {
+color: #000;
+font-size: 1.1rem;
+font-weight: 600;
+}
+
+.service-item p {
+font-size: 0.9rem;
+margin-top: 5px;
+color: #000;
+}
+
+@media only screen and (max-width: 992px) {
+.service-item span {
+  font-size: 1.8rem;
+  padding: 5px;
+}
+.service-item h3 {
+  font-size: 1rem;
+}
+.service-item {
+  margin-bottom: 1.5rem;
+}
+}
+@media only screen and (min-width: 768px) {
+  .service-item {
+    width: 18rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+.service-item span i {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+}
+
+@media only screen and (max-width: 576px) {
+.service-item {
+  padding: 20px;
+}
+}
