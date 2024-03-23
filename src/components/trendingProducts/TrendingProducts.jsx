@@ -75,14 +75,14 @@ const TrendingProducts = () => {
                         {cartItems.some((p) => p.id === item.id) ? (
                           <button
                             onClick={() => deleteCart(item)}
-                            className="px-8 py-3 text-sm text-center font-medium md:px-6 lg:px-7 md:py-[0.9rem] lg:font-semibold text-white bg-gray-800 duration-300 border border--600  hover:bg-gray-900 hover:text-gray-100 rounded-full"
+                            className="bg-gray-800 hover:bg-black w-56 duration-300 text-white py-[10px] rounded-full font-semibold"
                           >
                             Remove from Cart
                           </button>
                         ) : (
                           <button
                             onClick={() => addCart(item)}
-                            className="px-11 py-3 text-center sm:font-normal lg:font-semibold text-white bg-[#6a9739] hover:bg-black duration-300 hover:text-gray-100 rounded-full"
+                            className="bg-[#6a9739] hover:bg-black duration-300 w-56 text-white py-[10px] rounded-full font-semibold"
                           >
                             Add to Cart
                           </button>

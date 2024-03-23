@@ -52,7 +52,7 @@ const AllProducts = () => {
                     <div className="h-full overflow-hidden cursor-pointer">
                       <img
                         onClick={() => navigate(`/productinfo/${id}`)}
-                        className="lg:h-64 p-0 md:p-0 m-auto h-64 w-80 w-full"
+                        className="lg:h-64 p-0 md:p-0 m-auto h-64 lg:w-64 w-72"
                         src={productImageUrl}
                         alt="blog"
                       />
@@ -71,14 +71,14 @@ const AllProducts = () => {
                           {cartItems.some((p) => p.id === item.id) ? (
                             <button
                               onClick={() => deleteCart(item)}
-                              className=" bg-red-700 hover:bg-black w-56 duration-300 text-white py-[8px] rounded-full font-bold"
+                              className="bg-gray-800 hover:bg-black w-56 duration-300 text-white py-[8px] rounded-full font-bold"
                             >
-                              Delete From Cart
+                              Remove From Cart
                             </button>
                           ) : (
                             <button
                               onClick={() => addCart(item)}
-                              className=" bg-[#6a9739] hover:bg-black duration-300 w-56 text-white py-[8px] rounded-full font-bold"
+                              className="bg-[#6a9739] hover:bg-black duration-300 w-56 text-white py-[8px] rounded-full font-bold"
                             >
                               Add To Cart
                             </button>
