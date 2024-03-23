@@ -49,21 +49,21 @@ const AllProducts = () => {
                     key={index}
                     className="p-4 w-full md:w-1/3 lg:w-1/4 md:px-3 md:gap-3 items-center"
                   >
-                    <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                    <div className="h-full overflow-hidden cursor-pointer">
                       <img
                         onClick={() => navigate(`/productinfo/${id}`)}
-                        className="lg:h-64 p-10 md:p-0 h-88 w-full"
+                        className="lg:h-64 p-0 md:p-0 m-auto h-64 w-80 w-full"
                         src={productImageUrl}
                         alt="blog"
                       />
-                      <div className="p-6">
+                      <div className="p-6 text-center">
                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                           Verdant
                         </h2>
                         <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                           {title.substring(0, 25)}
                         </h1>
-                        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                        <h1 className="title-font text-sm mb-6 md:text-lg font-medium text-gray-900 mb-3">
                           EGP {price}
                         </h1>
 
@@ -71,14 +71,14 @@ const AllProducts = () => {
                           {cartItems.some((p) => p.id === item.id) ? (
                             <button
                               onClick={() => deleteCart(item)}
-                              className=" bg-red-700 hover:bg-black w-full text-white py-[8px] rounded-full font-bold"
+                              className=" bg-red-700 hover:bg-black w-56 duration-300 text-white py-[8px] rounded-full font-bold"
                             >
                               Delete From Cart
                             </button>
                           ) : (
                             <button
                               onClick={() => addCart(item)}
-                              className=" bg-green-600 hover:bg-green-900 w-full text-white py-[8px] rounded-full font-bold"
+                              className=" bg-[#6a9739] hover:bg-black duration-300 w-56 text-white py-[8px] rounded-full font-bold"
                             >
                               Add To Cart
                             </button>

@@ -1,19 +1,22 @@
 import { useNavigate } from "react-router";
 import categoryImg from "../../../public/img/basil-leaf.png";
+import groceriesImg from "../../../public/img/ggroceries.png"
+import glutenImg from "../../../public/img/glutenfree.png"
+import snacksImg from "../../../public/img/snacks.png"
 
 const category = [
   {
-    image: "../../../public/img/ggroceries.png",
+    image: groceriesImg,
     name: "Groceries",
     id: "5554",
   },
   {
-    image: "../../../public/img/glutenfree.png",
+    image: glutenImg,
     name: "Gluten-Free",
     id: "999",
   },
   {
-    image: "../../../public/img/snacks.png",
+    image: snacksImg,
     name: "Snacks",
     id: "5433",
   },

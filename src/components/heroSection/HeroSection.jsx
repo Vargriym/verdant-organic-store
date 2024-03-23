@@ -7,7 +7,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-        <div className="flex md:flex-row md:m-auto items-center lg:m-auto lg:justify-center lg:px-64 bg-gray-50 sm:w-1/1 pb-12 relative overflow-hidden">
+        <div className="md:flex md:flex-row md:m-auto items-center lg:m-auto lg:justify-center lg:px-64 bg-gray-50 sm:w-1/1 pb-12 relative overflow-hidden">
            <img className=" sm:m-auto sm:w-[30rem] md:m-0 md:w-[42rem] md:h-[28rem] md:pt-28 lg:ml-20 xl:ml-0 lg:pl-20 lg:mx-auto lg:h-full md:p-5 p-20" src={heroImg} alt="heroImg" />
            <div className="text-center p-5 md:px-0 md:py-20 md:text-start md:pl-8 lg:mt-4">
             <img className="m-auto md:m-0" src={introImg} alt="IntroImg" />

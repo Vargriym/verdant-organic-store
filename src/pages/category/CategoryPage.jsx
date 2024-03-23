@@ -39,7 +39,7 @@ const CategoryPage = () => {
     <Layout>
       <div className="mt-10">
         <div className="">
-          <h1 className=" text-center mb-5 text-3xl font-semibold first-letter:uppercase">
+          <h1 className=" text-center mb-12 text-3xl font-semibold first-letter:uppercase">
             {categoryname}
           </h1>
         </div>
@@ -52,29 +52,29 @@ const CategoryPage = () => {
         ) : (
           <>
             <section className="text-gray-600 body-font">
-              <div className="container px-5 py-5 mx-auto ">
-                <div className="flex flex-wrap -m-4  justify-center">
+              <div className="w-full px-5 py-5 mx-auto ">
+                <div className="flex flex-wrap -m-4 justify-center">
                   {filterProduct.length > 0 ? (
                     <>
                       {filterProduct.map((item, index) => {
                         const { id, title, price, productImageUrl } = item;
                         return (
-                          <div key={index} className="p-4 w-full md:w-1/4">
-                            <div className="h-full border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer">
+                          <div key={index} className="p-20 py-0 sm:px-10 sm:mb-20 w-full">
+                            <div className="h-full overflow-hidden cursor-pointer">
                               <img
                                 onClick={() => navigate(`/productinfo/${id}`)}
-                                className="lg:h-72 h-96 w-full"
+                                className="sm:h-64 sm:w-72 m-auto lg:h-72 w-full"
                                 src={productImageUrl}
                                 alt="blog"
                               />
-                              <div className="p-6">
+                              <div className="p-6 text-center">
                                 <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                                   Verdant
                                 </h2>
                                 <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                                   {title.substring(0, 25)}
                                 </h1>
-                                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                                <h1 className="title-font text-sm md:text-lg font-medium text-gray-900 mb-3">
                                   EGP {price}
                                 </h1>
 
@@ -82,14 +82,14 @@ const CategoryPage = () => {
                                   {cartItems.some((p) => p.id === item.id) ? (
                                     <button
                                       onClick={() => deleteCart(item)}
-                                      className=" bg-red-400 hover:bg-gray-600 w-full text-white py-[8px] rounded-lg font-bold"
+                                      className=" bg-red-400 hover:bg-gray-600 w-full sm:w-56 text-white py-[8px] duration-300 rounded-full font-bold"
                                     >
                                       Remove from Cart
                                     </button>
                                   ) : (
                                     <button
                                       onClick={() => addCart(item)}
-                                      className=" bg-green-500 hover:bg-black w-full text-white py-[8px] rounded-lg font-bold"
+                                      className="bg-[#8bc34a] hover:bg-black w-full sm:w-56 text-white duration-300 py-[8px] px-[1px] rounded-full font-bold"
                                     >
                                       Add To Cart
                                     </button>
